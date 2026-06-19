@@ -1,1 +1,756 @@
-<h1>trabajo en preceso</h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Agustín Ferrer — Full Stack Developer Junior. Portfolio personal con proyectos, habilidades y formación técnica." />
+  <meta name="keywords" content="Full Stack Developer, Portfolio, Programador, HTML, CSS, JavaScript, Python, Java" />
+  <meta name="author" content="Agustín Ferrer" />
+  <meta property="og:title" content="Agustín Ferrer | Full Stack Developer" />
+  <meta property="og:description" content="Portfolio profesional de Agustín Ferrer, programador Full Stack Junior." />
+  <meta property="og:type" content="website" />
+  <title>Agustín Ferrer | Full Stack Developer</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- AOS Animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════════ -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#inicio" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-name">AF</span>
+        <span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+        <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
+        <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
+        <li><a href="#formacion" class="nav-link">Formación</a></li>
+        <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+        <li><a href="#stats" class="nav-link">Stats</a></li>
+        <li><a href="#contacto" class="nav-link">Contacto</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════
+       HERO SECTION
+  ═══════════════════════════════════════════ -->
+  <section id="inicio" class="hero">
+    <canvas id="particleCanvas"></canvas>
+    <div class="hero-grid-overlay"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge" data-aos="fade-down" data-aos-duration="800">
+        <span class="badge-dot"></span>
+        <span>Disponible para trabajar</span>
+      </div>
+
+      <p class="hero-greeting" data-aos="fade-up" data-aos-delay="100">
+        <span class="mono">&gt; Hola, mundo! Mi nombre es</span>
+      </p>
+
+      <h1 class="hero-name" data-aos="fade-up" data-aos-delay="200">
+        Agustín<br /><span class="name-highlight">Ferrer</span>
+      </h1>
+
+      <div class="hero-title" data-aos="fade-up" data-aos-delay="350">
+        <span class="title-prefix mono">//</span>
+        <span id="typed-text" class="typed-display"></span>
+        <span class="typed-cursor">|</span>
+      </div>
+
+      <p class="hero-description" data-aos="fade-up" data-aos-delay="500">
+        Programador Full Stack Junior apasionado por construir soluciones digitales elegantes.
+        Córdoba, Argentina 🇦🇷
+      </p>
+
+      <div class="hero-actions" data-aos="fade-up" data-aos-delay="650">
+        <a href="#proyectos" class="btn btn-primary">
+          <i class="fas fa-code"></i> Ver Proyectos
+        </a>
+        <a href="#" class="btn btn-secondary" id="downloadCV">
+          <i class="fas fa-download"></i> Descargar CV
+        </a>
+        <a href="#contacto" class="btn btn-ghost">
+          <i class="fas fa-paper-plane"></i> Contactarme
+        </a>
+      </div>
+
+      <div class="hero-social" data-aos="fade-up" data-aos-delay="800">
+        <a href="https://github.com/" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="mailto:agustin@email.com" class="social-link" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-scroll-indicator">
+      <div class="scroll-line"></div>
+      <span class="mono">scroll</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SOBRE MÍ
+  ═══════════════════════════════════════════ -->
+  <section id="sobre-mi" class="section sobre-mi">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag mono">01 // about</span>
+        <h2 class="section-title">Sobre <span class="gradient-text">mí</span></h2>
+      </div>
+
+      <div class="about-grid">
+        <!-- Foto + decoración -->
+        <div class="about-visual" data-aos="fade-right" data-aos-delay="100">
+          <div class="about-photo-wrap">
+            <div class="photo-frame">
+              <div class="photo-placeholder">
+                <i class="fas fa-user-code"></i>
+                <span class="mono">agustin.jpg</span>
+              </div>
+              <div class="photo-glow"></div>
+            </div>
+            <div class="about-code-snippet">
+              <pre><code><span class="c-keyword">const</span> <span class="c-var">dev</span> = {
+  <span class="c-prop">nombre</span>: <span class="c-str">"Agustín"</span>,
+  <span class="c-prop">rol</span>: <span class="c-str">"Full Stack Jr"</span>,
+  <span class="c-prop">ubicación</span>: <span class="c-str">"Córdoba 🇦🇷"</span>,
+  <span class="c-prop">open_to_work</span>: <span class="c-bool">true</span>
+};</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <!-- Texto + cards -->
+        <div class="about-content" data-aos="fade-left" data-aos-delay="200">
+          <p class="about-text">
+            Soy estudiante de <strong>Tecnicatura en Programación Full Stack</strong> con una gran pasión
+            por construir aplicaciones que resuelven problemas reales. Me encontrás codeando de madrugada,
+            aprendiendo nuevas tecnologías y buscando siempre la solución más limpia y eficiente.
+          </p>
+          <p class="about-text">
+            Creo que la programación es tanto una ciencia como un arte: me interesa tanto que el código
+            funcione como que sea legible, mantenible y elegante. Busco mi primera oportunidad laboral
+            en IT para crecer junto a un equipo y aportar valor desde el primer día.
+          </p>
+
+          <div class="about-cards">
+            <div class="about-card">
+              <div class="about-card-icon"><i class="fas fa-rocket"></i></div>
+              <div>
+                <h4>Aprendizaje Continuo</h4>
+                <p>Siempre explorando nuevas tecnologías y mejores prácticas</p>
+              </div>
+            </div>
+            <div class="about-card">
+              <div class="about-card-icon"><i class="fas fa-puzzle-piece"></i></div>
+              <div>
+                <h4>Problem Solver</h4>
+                <p>Me apasiona descomponer problemas complejos en soluciones simples</p>
+              </div>
+            </div>
+            <div class="about-card">
+              <div class="about-card-icon"><i class="fas fa-users"></i></div>
+              <div>
+                <h4>Trabajo en Equipo</h4>
+                <p>Comunicación clara y colaboración como pilares del desarrollo</p>
+              </div>
+            </div>
+            <div class="about-card">
+              <div class="about-card-icon"><i class="fas fa-bullseye"></i></div>
+              <div>
+                <h4>Orientado a Resultados</h4>
+                <p>Foco en entregar valor real, no solo código que compila</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       HABILIDADES
+  ═══════════════════════════════════════════ -->
+  <section id="habilidades" class="section habilidades">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag mono">02 // skills</span>
+        <h2 class="section-title">Habilidades <span class="gradient-text">Técnicas</span></h2>
+      </div>
+
+      <div class="skills-layout">
+        <!-- Skill Cards Column -->
+        <div class="skills-categories" data-aos="fade-right">
+          <div class="skill-category">
+            <div class="skill-cat-header">
+              <i class="fas fa-laptop-code"></i>
+              <span>Frontend</span>
+            </div>
+            <div class="skill-items">
+              <div class="skill-item" data-level="75">
+                <div class="skill-icon html"><i class="fab fa-html5"></i></div>
+                <div class="skill-info">
+                  <div class="skill-name-row"><span>HTML5</span><span class="skill-pct">75%</span></div>
+                  <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+                </div>
+              </div>
+              <div class="skill-item" data-level="70">
+                <div class="skill-icon css"><i class="fab fa-css3-alt"></i></div>
+                <div class="skill-info">
+                  <div class="skill-name-row"><span>CSS3</span><span class="skill-pct">70%</span></div>
+                  <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+                </div>
+              </div>
+              <div class="skill-item" data-level="60">
+                <div class="skill-icon js"><i class="fab fa-js-square"></i></div>
+                <div class="skill-info">
+                  <div class="skill-name-row"><span>JavaScript</span><span class="skill-pct">60%</span></div>
+                  <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <div class="skill-cat-header">
+              <i class="fas fa-server"></i>
+              <span>Backend</span>
+            </div>
+            <div class="skill-items">
+              <div class="skill-item" data-level="65">
+                <div class="skill-icon python"><i class="fab fa-python"></i></div>
+                <div class="skill-info">
+                  <div class="skill-name-row"><span>Python</span><span class="skill-pct">65%</span></div>
+                  <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
+                </div>
+              </div>
+              <div class="skill-item" data-level="55">
+                <div class="skill-icon java"><i class="fab fa-java"></i></div>
+                <div class="skill-info">
+                  <div class="skill-name-row"><span>Java</span><span class="skill-pct">55%</span></div>
+                  <div class="skill-bar"><div class="skill-fill" data-width="55"></div></div>
+                </div>
+              </div>
+              <div class="skill-item" data-level="60">
+                <div class="skill-icon sql"><i class="fas fa-database"></i></div>
+                <div class="skill-info">
+                  <div class="skill-name-row"><span>SQL</span><span class="skill-pct">60%</span></div>
+                  <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <div class="skill-cat-header">
+              <i class="fas fa-tools"></i>
+              <span>Herramientas</span>
+            </div>
+            <div class="skill-items">
+              <div class="skill-item" data-level="70">
+                <div class="skill-icon git"><i class="fab fa-git-alt"></i></div>
+                <div class="skill-info">
+                  <div class="skill-name-row"><span>Git</span><span class="skill-pct">70%</span></div>
+                  <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+                </div>
+              </div>
+              <div class="skill-item" data-level="65">
+                <div class="skill-icon github-tool"><i class="fab fa-github"></i></div>
+                <div class="skill-info">
+                  <div class="skill-name-row"><span>GitHub</span><span class="skill-pct">65%</span></div>
+                  <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
+                </div>
+              </div>
+              <div class="skill-item" data-level="55">
+                <div class="skill-icon pg"><i class="fas fa-layer-group"></i></div>
+                <div class="skill-info">
+                  <div class="skill-name-row"><span>PostgreSQL</span><span class="skill-pct">55%</span></div>
+                  <div class="skill-bar"><div class="skill-fill" data-width="55"></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tech Globe / Icon Grid -->
+        <div class="skills-visual" data-aos="fade-left" data-aos-delay="150">
+          <div class="tech-orbit">
+            <div class="orbit-center">
+              <i class="fas fa-code"></i>
+            </div>
+            <div class="orbit orbit-1">
+              <div class="orbit-dot" style="--angle:0deg"><i class="fab fa-html5"></i></div>
+              <div class="orbit-dot" style="--angle:72deg"><i class="fab fa-css3-alt"></i></div>
+              <div class="orbit-dot" style="--angle:144deg"><i class="fab fa-js-square"></i></div>
+              <div class="orbit-dot" style="--angle:216deg"><i class="fab fa-python"></i></div>
+              <div class="orbit-dot" style="--angle:288deg"><i class="fab fa-java"></i></div>
+            </div>
+            <div class="orbit orbit-2">
+              <div class="orbit-dot" style="--angle:36deg"><i class="fab fa-git-alt"></i></div>
+              <div class="orbit-dot" style="--angle:108deg"><i class="fab fa-github"></i></div>
+              <div class="orbit-dot" style="--angle:180deg"><i class="fas fa-database"></i></div>
+              <div class="orbit-dot" style="--angle:252deg"><i class="fas fa-terminal"></i></div>
+              <div class="orbit-dot" style="--angle:324deg"><i class="fas fa-layer-group"></i></div>
+            </div>
+          </div>
+          <div class="learning-now">
+            <span class="mono learning-label">&gt; aprendiendo ahora</span>
+            <div class="learning-tags">
+              <span class="ltag">React</span>
+              <span class="ltag">Node.js</span>
+              <span class="ltag">REST APIs</span>
+              <span class="ltag">Docker</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FORMACIÓN
+  ═══════════════════════════════════════════ -->
+  <section id="formacion" class="section formacion">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag mono">03 // education</span>
+        <h2 class="section-title">Mi <span class="gradient-text">Formación</span></h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item" data-aos="fade-right" data-aos-delay="0">
+          <div class="timeline-marker active">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-date">2023 – Presente</div>
+            <h3 class="timeline-title">Tecnicatura en Programación Full Stack</h3>
+            <p class="timeline-place"><i class="fas fa-map-marker-alt"></i> Instituto Técnico — Córdoba, Argentina</p>
+            <p class="timeline-desc">
+              Programa intensivo que cubre desarrollo Frontend y Backend, estructuras de datos,
+              bases de datos relacionales, metodologías ágiles y buenas prácticas de desarrollo.
+            </p>
+            <div class="timeline-tags">
+              <span>HTML/CSS/JS</span>
+              <span>Python</span>
+              <span>Java</span>
+              <span>SQL</span>
+              <span>Git</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-left" data-aos-delay="100">
+          <div class="timeline-marker done">
+            <i class="fas fa-certificate"></i>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-date">2024</div>
+            <h3 class="timeline-title">Fundamentos de Python</h3>
+            <p class="timeline-place"><i class="fas fa-globe"></i> Coursera / Online</p>
+            <p class="timeline-desc">
+              Curso de programación en Python cubriendo sintaxis, estructuras de control,
+              funciones, manejo de archivos y programación orientada a objetos.
+            </p>
+            <div class="timeline-tags">
+              <span>Python</span>
+              <span>POO</span>
+              <span>Algoritmos</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-right" data-aos-delay="200">
+          <div class="timeline-marker done">
+            <i class="fas fa-code-branch"></i>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-date">2024</div>
+            <h3 class="timeline-title">Control de Versiones con Git & GitHub</h3>
+            <p class="timeline-place"><i class="fas fa-globe"></i> Platzi / Online</p>
+            <p class="timeline-desc">
+              Manejo avanzado de Git: branching, merging, pull requests, resolución de conflictos
+              y flujo de trabajo colaborativo con GitHub.
+            </p>
+            <div class="timeline-tags">
+              <span>Git</span>
+              <span>GitHub</span>
+              <span>CI/CD básico</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item future" data-aos="fade-left" data-aos-delay="300">
+          <div class="timeline-marker future-marker">
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-date">Próximamente</div>
+            <h3 class="timeline-title">Certificación AWS Cloud Practitioner</h3>
+            <p class="timeline-place"><i class="fas fa-cloud"></i> Amazon Web Services</p>
+            <p class="timeline-desc">
+              Objetivo: obtener la certificación base de AWS para incorporar Cloud Computing
+              a mi stack tecnológico y ampliar mis posibilidades profesionales.
+            </p>
+            <div class="timeline-tags">
+              <span>AWS</span>
+              <span>Cloud</span>
+              <span>DevOps</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       PROYECTOS
+  ═══════════════════════════════════════════ -->
+  <section id="proyectos" class="section proyectos">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag mono">04 // projects</span>
+        <h2 class="section-title">Mis <span class="gradient-text">Proyectos</span></h2>
+      </div>
+
+      <div class="projects-filter" data-aos="fade-up" data-aos-delay="100">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="frontend">Frontend</button>
+        <button class="filter-btn" data-filter="backend">Backend</button>
+        <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+
+        <div class="project-card" data-category="frontend" data-aos="zoom-in" data-aos-delay="0">
+          <div class="project-image">
+            <div class="project-img-placeholder">
+              <i class="fas fa-palette"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="overlay-btn" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
+              <a href="#" class="overlay-btn" target="_blank"><i class="fab fa-github"></i> Código</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="ptag frontend">Frontend</span>
+            </div>
+            <h3 class="project-title">Landing Page Responsiva</h3>
+            <p class="project-desc">Página de presentación para una startup local, con diseño mobile-first, animaciones CSS y formulario de contacto funcional.</p>
+            <div class="project-tech">
+              <span><i class="fab fa-html5"></i> HTML5</span>
+              <span><i class="fab fa-css3-alt"></i> CSS3</span>
+              <span><i class="fab fa-js-square"></i> JS</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-btn-secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+              <a href="#" class="project-btn-primary" target="_blank"><i class="fas fa-rocket"></i> Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="backend" data-aos="zoom-in" data-aos-delay="100">
+          <div class="project-image">
+            <div class="project-img-placeholder">
+              <i class="fas fa-tasks"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="overlay-btn" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
+              <a href="#" class="overlay-btn" target="_blank"><i class="fab fa-github"></i> Código</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="ptag backend">Backend</span>
+            </div>
+            <h3 class="project-title">API de Gestión de Tareas</h3>
+            <p class="project-desc">REST API construida con Python para gestión de tareas con autenticación, CRUD completo y persistencia en base de datos.</p>
+            <div class="project-tech">
+              <span><i class="fab fa-python"></i> Python</span>
+              <span><i class="fas fa-database"></i> SQL</span>
+              <span><i class="fas fa-server"></i> REST</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-btn-secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+              <a href="#" class="project-btn-primary" target="_blank"><i class="fas fa-rocket"></i> Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="fullstack" data-aos="zoom-in" data-aos-delay="200">
+          <div class="project-image">
+            <div class="project-img-placeholder">
+              <i class="fas fa-shopping-cart"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="overlay-btn" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
+              <a href="#" class="overlay-btn" target="_blank"><i class="fab fa-github"></i> Código</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="ptag fullstack">Full Stack</span>
+            </div>
+            <h3 class="project-title">Tienda Online</h3>
+            <p class="project-desc">Aplicación e-commerce con catálogo de productos, carrito de compras, panel de administración y gestión de inventario.</p>
+            <div class="project-tech">
+              <span><i class="fab fa-html5"></i> HTML</span>
+              <span><i class="fab fa-js-square"></i> JS</span>
+              <span><i class="fab fa-python"></i> Python</span>
+              <span><i class="fas fa-database"></i> PostgreSQL</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-btn-secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+              <a href="#" class="project-btn-primary" target="_blank"><i class="fas fa-rocket"></i> Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="frontend" data-aos="zoom-in" data-aos-delay="300">
+          <div class="project-image">
+            <div class="project-img-placeholder">
+              <i class="fas fa-cloud-sun"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="overlay-btn" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
+              <a href="#" class="overlay-btn" target="_blank"><i class="fab fa-github"></i> Código</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="ptag frontend">Frontend</span>
+            </div>
+            <h3 class="project-title">App del Clima</h3>
+            <p class="project-desc">Aplicación que consume una API meteorológica y muestra el pronóstico en tiempo real con visualizaciones dinámicas.</p>
+            <div class="project-tech">
+              <span><i class="fab fa-js-square"></i> JavaScript</span>
+              <span><i class="fas fa-plug"></i> API</span>
+              <span><i class="fab fa-css3-alt"></i> CSS</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-btn-secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+              <a href="#" class="project-btn-primary" target="_blank"><i class="fas fa-rocket"></i> Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="backend" data-aos="zoom-in" data-aos-delay="400">
+          <div class="project-image">
+            <div class="project-img-placeholder">
+              <i class="fas fa-user-shield"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="overlay-btn" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
+              <a href="#" class="overlay-btn" target="_blank"><i class="fab fa-github"></i> Código</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="ptag backend">Backend</span>
+            </div>
+            <h3 class="project-title">Sistema de Autenticación</h3>
+            <p class="project-desc">Módulo de login/registro con JWT, roles de usuario, recuperación de contraseña y rate limiting para protección contra ataques.</p>
+            <div class="project-tech">
+              <span><i class="fab fa-java"></i> Java</span>
+              <span><i class="fas fa-key"></i> JWT</span>
+              <span><i class="fas fa-database"></i> SQL</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-btn-secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+              <a href="#" class="project-btn-primary" target="_blank"><i class="fas fa-rocket"></i> Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="fullstack" data-aos="zoom-in" data-aos-delay="500">
+          <div class="project-image">
+            <div class="project-img-placeholder">
+              <i class="fas fa-comments"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="overlay-btn" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
+              <a href="#" class="overlay-btn" target="_blank"><i class="fab fa-github"></i> Código</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="ptag fullstack">Full Stack</span>
+            </div>
+            <h3 class="project-title">Foro de Preguntas</h3>
+            <p class="project-desc">Plataforma Q&A estilo Stack Overflow con sistema de votos, tags, búsqueda y perfil de usuario personalizable.</p>
+            <div class="project-tech">
+              <span><i class="fab fa-html5"></i> HTML</span>
+              <span><i class="fab fa-python"></i> Python</span>
+              <span><i class="fas fa-layer-group"></i> PostgreSQL</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-btn-secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+              <a href="#" class="project-btn-primary" target="_blank"><i class="fas fa-rocket"></i> Demo</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       STATS
+  ═══════════════════════════════════════════ -->
+  <section id="stats" class="section stats-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag mono">05 // metrics</span>
+        <h2 class="section-title">En <span class="gradient-text">Números</span></h2>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card" data-aos="zoom-in" data-aos-delay="0">
+          <div class="stat-icon"><i class="fas fa-folder-open"></i></div>
+          <div class="stat-number" data-target="6">0</div>
+          <div class="stat-label">Proyectos Realizados</div>
+        </div>
+        <div class="stat-card" data-aos="zoom-in" data-aos-delay="100">
+          <div class="stat-icon"><i class="fas fa-microchip"></i></div>
+          <div class="stat-number" data-target="9">0</div>
+          <div class="stat-label">Tecnologías Aprendidas</div>
+        </div>
+        <div class="stat-card" data-aos="zoom-in" data-aos-delay="200">
+          <div class="stat-icon"><i class="fas fa-clock"></i></div>
+          <div class="stat-number" data-target="1200">0</div>
+          <div class="stat-label">Horas de Estudio</div>
+        </div>
+        <div class="stat-card" data-aos="zoom-in" data-aos-delay="300">
+          <div class="stat-icon"><i class="fas fa-award"></i></div>
+          <div class="stat-number" data-target="3">0</div>
+          <div class="stat-label">Certificaciones</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CONTACTO
+  ═══════════════════════════════════════════ -->
+  <section id="contacto" class="section contacto">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag mono">06 // contact</span>
+        <h2 class="section-title">Hablemos <span class="gradient-text">🚀</span></h2>
+        <p class="section-sub">¿Tenés un proyecto en mente o una oportunidad laboral? Me encantaría escucharte.</p>
+      </div>
+
+      <div class="contact-layout">
+        <div class="contact-info" data-aos="fade-right">
+          <div class="contact-card">
+            <a href="mailto:agustin@email.com" class="contact-item">
+              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <p class="contact-label">Email</p>
+                <p class="contact-value">agustin@email.com</p>
+              </div>
+            </a>
+            <a href="https://linkedin.com/" target="_blank" rel="noopener" class="contact-item">
+              <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+              <div>
+                <p class="contact-label">LinkedIn</p>
+                <p class="contact-value">/in/agustin-ferrer</p>
+              </div>
+            </a>
+            <a href="https://github.com/" target="_blank" rel="noopener" class="contact-item">
+              <div class="contact-icon"><i class="fab fa-github"></i></div>
+              <div>
+                <p class="contact-label">GitHub</p>
+                <p class="contact-value">@agustinferrer</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="contact-status">
+            <div class="status-dot"></div>
+            <span>Disponible para trabajo remoto y presencial en Córdoba</span>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm" data-aos="fade-left" novalidate>
+          <div class="form-group">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" id="nombre" name="nombre" class="form-input" placeholder="Tu nombre" required />
+          </div>
+          <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" name="email" class="form-input" placeholder="tu@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="mensaje" class="form-label">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" class="form-input form-textarea" placeholder="Contame sobre tu proyecto u oportunidad..." rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit">
+            <i class="fas fa-paper-plane"></i> Enviar Mensaje
+          </button>
+          <p class="form-note mono">// El formulario abre tu cliente de email automáticamente</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-name">AF</span>
+        <span class="logo-bracket">/&gt;</span>
+      </div>
+      <p class="footer-name">Agustín Ferrer</p>
+      <p class="footer-quote mono">"El código es poesía que la máquina entiende."</p>
+      <div class="footer-social">
+        <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:agustin@email.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+      <p class="footer-copy">
+        &copy; 2025 Agustín Ferrer. Hecho con <span class="heart">♥</span> y mucho <span class="mono">caffeine</span>.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
