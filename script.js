@@ -322,7 +322,7 @@ AOS.init({
     const body    = encodeURIComponent(
       `Hola Agustín,\n\nTe escribo desde tu portfolio.\n\n${mensaje}\n\n---\nDe: ${nombre}\nEmail: ${email}`
     );
-    window.location.href = `mailto:agustin@email.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:agustin.ezequiel.ferrer@gmail.com?subject=${subject}&body=${body}`;
 
     showFormFeedback(form, '¡Listo! Tu cliente de email se abrirá ahora.', 'success');
     form.reset();
