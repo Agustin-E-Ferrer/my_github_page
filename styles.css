@@ -693,8 +693,10 @@ button { cursor: pointer; border: none; background: none; }
 
 .orbit-dot {
   position: absolute;
-  top: 50%; left: 50%;
-  width: 36px; height: 36px;
+  top: 50%;
+  left: 50%;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   background: var(--bg-card);
   border: 1px solid var(--white-10);
@@ -703,22 +705,37 @@ button { cursor: pointer; border: none; background: none; }
   justify-content: center;
   font-size: 0.9rem;
   color: var(--blue-light);
-  transform:
-    translate(-50%,-50%)
-    rotate(var(--angle))
-    translateY(calc(-1 * (var(--r, 80px))))
-    rotate(calc(-1 * var(--angle)));
-  animation: counter-spin-1 18s linear infinite;
+  margin-top: -18px;
+  margin-left: -18px;
 }
-.orbit-1 .orbit-dot { --r: 80px; animation-duration: 18s; }
-.orbit-2 .orbit-dot { --r: 125px; animation-duration: 30s; animation-direction: reverse; }
 
-@keyframes counter-spin-1 { to { transform:
-    translate(-50%,-50%)
-    rotate(calc(var(--angle) + 360deg))
-    translateY(calc(-1 * var(--r, 80px)))
-    rotate(calc(-1 * (var(--angle) + 360deg)));
-} }
+.orbit-1 .orbit-dot {
+  transform: rotate(var(--angle)) translateY(-80px) rotate(calc(-1 * var(--angle)));
+  animation: dot-spin-1 18s linear infinite;
+}
+
+.orbit-2 .orbit-dot {
+  transform: rotate(var(--angle)) translateY(-125px) rotate(calc(-1 * var(--angle)));
+  animation: dot-spin-2 30s linear infinite reverse;
+}
+
+@keyframes dot-spin-1 {
+  from {
+    transform: rotate(var(--angle)) translateY(-80px) rotate(calc(-1 * var(--angle)));
+  }
+  to {
+    transform: rotate(calc(var(--angle) + 360deg)) translateY(-80px) rotate(calc(-1 * (var(--angle) + 360deg)));
+  }
+}
+
+@keyframes dot-spin-2 {
+  from {
+    transform: rotate(var(--angle)) translateY(-125px) rotate(calc(-1 * var(--angle)));
+  }
+  to {
+    transform: rotate(calc(var(--angle) + 360deg)) translateY(-125px) rotate(calc(-1 * (var(--angle) + 360deg)));
+  }
+}
 
 .learning-now { text-align: center; }
 .learning-label {
